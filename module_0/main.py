@@ -1,3 +1,4 @@
+import numpy as np
 def score_game(game_core):
     '''We start the game 1000 times to find out how quickly the game guesses the number'''
     count_ls = []
