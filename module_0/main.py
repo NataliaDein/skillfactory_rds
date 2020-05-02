@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def score_game(game_core):
     '''We start the game 1000 times to find out how quickly the game guesses the number'''
     count_ls = []
@@ -9,6 +11,7 @@ def score_game(game_core):
     score = int(np.mean(count_ls))
     print(f"Your algorithm guesses the average number per {score} attempts")
     return(score)
+
 
 def game_core_v3(number):
     '''As a predict we take always the middle of the interval.
@@ -23,10 +26,11 @@ def game_core_v3(number):
         if number > predict:
             limit_min = predict
             predict = (limit_min+limit_max) // 2
-        elif number < predict: 
+        else: 
             limit_max = predict
             predict = (limit_min+limit_max) // 2
     return(count) # Exit from the cycle, if the number is guessed
+
 
 # Check:
 score_game(game_core_v3)
