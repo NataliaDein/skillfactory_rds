@@ -29,7 +29,7 @@ def game_core_v3(number):
         else: 
             limit_max = predict
             predict = (limit_min+limit_max) // 2
-    return(count) # Exit from the cycle, if the number is guessed
+    return(count) # Return the count of attemptions from the function, if the number is guessed
 
 
 # Check:
